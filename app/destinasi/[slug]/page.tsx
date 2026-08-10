@@ -146,35 +146,19 @@ export default async function DestinationDetailPage({
 
 {/* Thumbnail Gallery */}
 <div className="mt-3 grid grid-cols-4 gap-3">
-  {[0, 1, 2].map((index) => (
-    <div
-      key={index}
-      className="h-24 overflow-hidden rounded-xl bg-gray-100"
-    >
-      <img
-        src={destination.image}
-        alt={`${destination.name} ${index + 1}`}
-        className="h-full w-full object-cover"
-      />
-    </div>
-  ))}
-
-  {/* More Photos */}
-  <div className="relative h-24 overflow-hidden rounded-xl bg-gray-900">
+{destination.gallery?.slice(0, 4).map((image, index) => (
+  <div
+    key={`${destination.id}-gallery-${index}`}
+    className="h-24 overflow-hidden rounded-xl bg-gray-100"
+  >
     <img
-      src={destination.image}
-      alt={`${destination.name} gallery`}
-      className="h-full w-full object-cover opacity-50"
+      src={image}
+      alt={`${destination.name} ${index + 1}`}
+      className="h-full w-full object-cover"
     />
-
-    <div className="absolute inset-0 flex items-center justify-center">
-      <span className="text-lg font-bold text-white">
-        +12
-      </span>
-    </div>
   </div>
-</div>
-
+))}
+  </div>
   </div>
 
             {/* Description */}

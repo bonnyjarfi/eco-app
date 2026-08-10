@@ -9,12 +9,27 @@ export const destinations: Destination[] = [
     category: "Pulau & Pantai",
     rating: 4.8,
     reviewCount: 128,
+  
     description:
       "Menikmati pesona pulau dan kehidupan masyarakat pesisir di sekitar Sorong.",
+  
     image:
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85",
+  
+    gallery: [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85",
+  
       "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=85",
+  
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=85",
+  
+      "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85",
+    ],
+  
     ecoScore: 88,
   },
+
+
   {
     id: "2",
     name: "Klasow Valley",
@@ -30,12 +45,16 @@ export const destinations: Destination[] = [
 
       gallery: [
         "https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=1200&q=85",
-        "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=1200&q=85",
-        "https://images.unsplash.com/photo-1474511320723-9a568735abb2?auto=format&fit=crop&w=1200&q=85",
+      
+        "https://images.unsplash.com/photo-1729432535786-0cc87d0087a2?auto=format&fit=crop&w=1200&q=85",
+      
         "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=85",
+      
+        "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1200&q=85",
       ],
     ecoScore: 92,
   },
+
   {
     id: "3",
     name: "Mangrove Klawalu",
@@ -44,26 +63,26 @@ export const destinations: Destination[] = [
     category: "Mangrove",
     rating: 4.7,
     reviewCount: 86,
+  
     description:
       "Jelajahi ekosistem mangrove dan nikmati pengalaman wisata alam yang dekat dengan masyarakat.",
+  
     image:
       "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=1200&q=85",
+  
+    gallery: [
+      "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=1200&q=85",
+  
+      "https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?auto=format&fit=crop&w=1200&q=85",
+  
+      "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85",
+  
+      "https://images.unsplash.com/photo-1516214104703-d870798883c5?auto=format&fit=crop&w=1200&q=85",
+    ],
+  
     ecoScore: 90,
   },
-  {
-    id: "4",
-    name: "Kampung Yenbeser",
-    slug: "kampung-yenbeser",
-    location: "Kabupaten Sorong",
-    category: "Kampung Wisata",
-    rating: 4.6,
-    reviewCount: 74,
-    description:
-      "Temukan kehidupan kampung, budaya, keramahan masyarakat dan pengalaman wisata berbasis komunitas.",
-    image:
-      "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=85",
-    ecoScore: 86,
-  },
+
   {
     id: "5",
     name: "Pulau Soop",
