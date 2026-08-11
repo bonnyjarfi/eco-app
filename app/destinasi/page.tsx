@@ -44,6 +44,11 @@ export default function DestinasiPage() {
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState("Semua");
 
+  const resetFilters = () => {
+    setSearch("");
+    setActiveCategory("Semua");
+  };
+
   const filteredDestinations = useMemo(() => {
     return destinations.filter((destination) => {
       const matchesCategory =
@@ -158,7 +163,7 @@ export default function DestinasiPage() {
           </div>
 
           {/* TITLE */}
-          <div className="mb-7 flex items-end justify-between gap-4">
+          <div className="mb-7 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
 
             <div>
               <p className="text-sm font-semibold text-emerald-600">
@@ -170,10 +175,19 @@ export default function DestinasiPage() {
               </h2>
 
               <p className="mt-2 text-sm text-gray-500">
-                {filteredDestinations.length} destinasi
-                ditemukan
+                {filteredDestinations.length} destinasi ditemukan
               </p>
             </div>
+
+            {(search || activeCategory !== "Semua") && (
+              <button
+                type="button"
+                onClick={resetFilters}
+                className="w-fit rounded-full border border-gray-200 bg-white px-4 py-2 text-xs font-semibold text-gray-600 transition hover:border-emerald-300 hover:text-emerald-700"
+              >
+                Reset Filter
+              </button>
+            )}
 
           </div>
 

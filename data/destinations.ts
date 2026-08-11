@@ -83,6 +83,7 @@ export const destinations: Destination[] = [
     ecoScore: 90,
   },
 
+
   {
     id: "5",
     name: "Pulau Soop",
@@ -93,10 +94,20 @@ export const destinations: Destination[] = [
     reviewCount: 61,
     description:
       "Destinasi pesisir dengan panorama laut dan kehidupan masyarakat pulau.",
+  
     image:
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85",
+  
+    gallery: [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85",
       "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1200&q=85",
+    ],
+  
     ecoScore: 87,
   },
+
   {
     id: "6",
     name: "Hutan Sorong",
@@ -107,8 +118,17 @@ export const destinations: Destination[] = [
     reviewCount: 55,
     description:
       "Temukan keanekaragaman hayati Papua melalui perjalanan alam yang bertanggung jawab.",
+  
     image:
       "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=85",
+  
+    gallery: [
+      "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1200&q=85",
+    ],
+  
     ecoScore: 91,
   },
   {
@@ -119,12 +139,23 @@ export const destinations: Destination[] = [
     category: "Wisata Bahari",
     rating: 4.7,
     reviewCount: 113,
+  
     description:
       "Pantai tropis dengan air jernih dan panorama pesisir yang menenangkan.",
+  
     image:
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85",
+  
+    gallery: [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=85",
+    ],
+  
     ecoScore: 85,
   },
+
   {
     id: "8",
     name: "Jalur Trekking Malagufuk",
@@ -133,10 +164,20 @@ export const destinations: Destination[] = [
     category: "Trekking",
     rating: 4.9,
     reviewCount: 91,
+  
     description:
       "Pengalaman trekking dan bird watching di tengah hutan tropis Papua.",
+  
     image:
       "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=85",
+  
+    gallery: [
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1200&q=85",
+    ],
+  
     ecoScore: 90,
   },
 ];
