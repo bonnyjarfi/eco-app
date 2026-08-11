@@ -1,34 +1,65 @@
 "use client";
 
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import {
+  MapContainer,
+  Marker,
+  Popup,
+  TileLayer,
+  useMap,
+} from "react-leaflet";
 import { MapPin, Star, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
 import { destinations } from "@/data/destinations";
-
+import { useEffect, useState } from "react";
 
 const destinationCoordinates: Record<
   string,
   [number, number]
 > = {
-  "pulau-doom": [-0.8814, 131.2478],
+  // Kota Sorong & sekitarnya
+  "pulau-doom": [-0.88694, 131.23611],
 
   "klasow-valley": [-0.8760, 131.4000],
 
-  "mangrove-klawalu": [-0.9300, 131.2900],
+  "mangrove-klawalu": [-0.9051, 131.3078],
 
-  "kampung-yenbeser": [-0.8200, 131.3600],
-
-  "pulau-soop": [-0.9250, 131.2300],
+  "pulau-soop": [-0.89062, 131.19860],
 
   "hutan-sorong": [-0.8500, 131.2900],
 
-  "pantai-tanjung-kasuari": [-0.8500, 131.2400],
+  "pantai-tanjung-kasuar": [-0.80468, 131.29349],
 
-  "jalur-trekking-malagufuk": [-0.7100, 132.0500],
+  // Kabupaten Sorong
+  "jalur-trekking-malagufuk": [-0.8091, 131.6341],
+
+  // Raja Ampat
+  "kampung-yenbeser": [-0.46460, 130.68180],
 };
+
+function MapController({
+  slug,
+}: {
+  slug: string | null;
+}) {
+  const map = useMap();
+
+  useEffect(() => {
+    if (!slug) return;
+
+    const coordinates = destinationCoordinates[slug];
+
+    if (!coordinates) return;
+
+    map.flyTo(coordinates, 14, {
+      duration: 1.5,
+    });
+  }, [slug, map]);
+
+  return null;
+}
 
 const createMarkerIcon = (active = false) =>
   L.divIcon({
@@ -73,6 +104,9 @@ const createMarkerIcon = (active = false) =>
 
   
 export default function ExploreMap() {
+  const [selectedDestination, setSelectedDestination] =
+    useState<string | null>(null);
+
   return (
     <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
@@ -114,12 +148,13 @@ export default function ExploreMap() {
               </div>
 
               <div className="space-y-2">
-                {destinations.map((destination) => (
-                  <Link
-                    key={destination.id}
-                    href={`/destinasi/${destination.slug}`}
-                    className="group flex items-center gap-3 rounded-xl p-2.5 transition hover:bg-emerald-50"
-                  >
+              {destinations.map((destination) => (
+                <button
+                  key={destination.id}
+                  type="button"
+                  onClick={() => setSelectedDestination(destination.slug)}
+                  className="group flex w-full items-center gap-3 rounded-xl p-2.5 text-left transition hover:bg-emerald-50"
+                >
                     {/* Thumbnail */}
                     <div className="h-12 w-12 shrink-0 overflow-hidden rounded-lg">
                       <img
@@ -160,7 +195,7 @@ export default function ExploreMap() {
                       size={15}
                       className="shrink-0 text-gray-300 transition group-hover:translate-x-1 group-hover:text-emerald-600"
                     />
-                  </Link>
+                  </button>
                 ))}
               </div>
 
@@ -175,7 +210,7 @@ export default function ExploreMap() {
           </div>
 
           {/* Map */}
-          <div className="relative h-[430px] min-h-[430px] lg:h-[500px]">
+          <div className="relative min-h-[430px] lg:min-h-[500px] lg:self-stretch">
 
             <MapContainer
               center={[-0.88, 131.30]}
@@ -183,6 +218,7 @@ export default function ExploreMap() {
               scrollWheelZoom={true}
               className="z-0 h-full w-full"
             >
+              <MapController slug={selectedDestination} />
 
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
