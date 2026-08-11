@@ -31,6 +31,11 @@ const navItems = [
     label: "Budaya",
     href: "/budaya",
   },
+
+  {
+    label: "Homestay",
+    href: "/homestay",
+  },
 ];
 
 export default function Navbar() {

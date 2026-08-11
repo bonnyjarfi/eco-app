@@ -53,7 +53,7 @@ function MapController({
 
     if (!coordinates) return;
 
-    map.flyTo(coordinates, 14, {
+    map.flyTo(coordinates, 15, {
       duration: 1.5,
     });
   }, [slug, map]);
