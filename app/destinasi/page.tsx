@@ -70,8 +70,19 @@ export default function DestinasiPage() {
     <main className="min-h-screen bg-[#f7faf8]">
 
       {/* HEADER */}
-      <section className="bg-emerald-950 px-4 pb-16 pt-28 text-white sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
+      <section
+  className="relative overflow-hidden bg-emerald-950 px-4 pb-12 pt-20 text-white sm:px-6 sm:pb-16 sm:pt-28 lg:px-8"
+  style={{
+    backgroundImage:
+      "url('https://images.unsplash.com/photo-1703769605307-395ace742240?auto=format&fit=crop&fm=jpg&q=85&w=1800')",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+  }}
+>
+        <div className="absolute inset-0 bg-emerald-950/75" />
+
+        <div className="relative z-10 mx-auto max-w-7xl">
+       
 
           <div className="max-w-3xl">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-900/50 px-4 py-2 text-xs font-medium text-emerald-200">

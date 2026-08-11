@@ -14,9 +14,20 @@ const destinationCoordinates: Record<
   [number, number]
 > = {
   "pulau-doom": [-0.8814, 131.2478],
+
   "klasow-valley": [-0.8760, 131.4000],
+
   "mangrove-klawalu": [-0.9300, 131.2900],
+
   "kampung-yenbeser": [-0.8200, 131.3600],
+
+  "pulau-soop": [-0.9250, 131.2300],
+
+  "hutan-sorong": [-0.8500, 131.2900],
+
+  "pantai-tanjung-kasuari": [-0.8500, 131.2400],
+
+  "jalur-trekking-malagufuk": [-0.7100, 132.0500],
 };
 
 const createMarkerIcon = (active = false) =>
@@ -24,8 +35,8 @@ const createMarkerIcon = (active = false) =>
     className: "custom-map-marker",
     html: `
       <div style="
-        width: ${active ? "42px" : "36px"};
-        height: ${active ? "42px" : "36px"};
+        width: ${active ? "44px" : "38px"};
+        height: ${active ? "44px" : "38px"};
         border-radius: 9999px;
         background: #059669;
         border: 4px solid white;
@@ -33,20 +44,34 @@ const createMarkerIcon = (active = false) =>
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
-        font-size: 18px;
       ">
-        ●
+        <svg
+          width="${active ? "22" : "19"}"
+          height="${active ? "22" : "19"}"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 4.2 20 5 20 5s.8 4.5-1.1 10.2A7 7 0 0 1 11 20Z"/>
+          <path d="M8 21c2.5-4.5 6-7.5 11-9"/>
+        </svg>
       </div>
     `,
-    iconSize: [active ? 42 : 36, active ? 42 : 36],
+    iconSize: [active ? 44 : 38, active ? 44 : 38],
     iconAnchor: [
-      active ? 21 : 18,
-      active ? 21 : 18,
+      active ? 22 : 19,
+      active ? 22 : 19,
     ],
-    popupAnchor: [0, active ? -21 : -18],
+    popupAnchor: [
+      0,
+      active ? -22 : -19,
+    ],
   });
 
+  
 export default function ExploreMap() {
   return (
     <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">

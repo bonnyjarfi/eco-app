@@ -180,4 +180,28 @@ export const destinations: Destination[] = [
   
     ecoScore: 90,
   },
+
+  {
+    id: "4",
+    name: "Kampung Yenbeser",
+    slug: "kampung-yenbeser",
+    location: "Kabupaten Raja Ampat",
+    category: "Kampung Wisata",
+    rating: 4.8,
+    reviewCount: 74,
+    description:
+      "Kampung wisata dengan kehidupan masyarakat lokal dan keindahan alam Papua yang autentik.",
+  
+    image:
+      "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85",
+  
+    gallery: [
+      "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=85",
+    ],
+  
+    ecoScore: 89,
+  },
 ];

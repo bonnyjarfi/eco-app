@@ -92,7 +92,7 @@ export default function Navbar() {
               </button>
 
               <Link
-                href="/destinasi"
+                href="/explore"
                 className="flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-emerald-800 shadow-lg transition hover:bg-emerald-50"
               >
                 <Leaf size={15} />
