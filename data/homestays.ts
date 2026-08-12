@@ -10,7 +10,7 @@ export const homestays: Homestay[] = [
       guideImage:
         "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
   
-      pricePerPerson: 450000,
+      pricePerPerson: 500000,
   
       rating: 4.9,
       reviewCount: 0,
